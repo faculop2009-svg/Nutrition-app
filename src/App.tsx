@@ -13,11 +13,13 @@ import { Navbar } from "./components/Navbar";
 import { PhotoScanner } from "./components/PhotoScanner";
 import { FoodDiary } from "./components/FoodDiary";
 import { BarcodeGlobalScanner } from "./components/BarcodeGlobalScanner";
+import { LongevityPlanSuite } from "./components/LongevityPlanSuite";
 import { WearableSync } from "./components/WearableSync";
 import { AnalyticsDashboard } from "./components/AnalyticsDashboard";
 import { ChallengesCommunity } from "./components/ChallengesCommunity";
 import { SecurityPanel } from "./components/SecurityPanel";
 import { NotificationCenter } from "./components/NotificationCenter";
+import { OfflineIndicator } from "./components/OfflineIndicator";
 
 export default function App() {
   const [vaultData, setVaultData] = useState<AppVaultData>(() => loadVaultData());
@@ -227,7 +229,18 @@ export default function App() {
           />
         )}
 
-        {/* Tab 4: Interactive Long-Term Analytics */}
+        {/* Tab 4: AI Longevity, Glycemic Simulation & Meal Planner Suite */}
+        {activeTab === "longevity" && (
+          <LongevityPlanSuite
+            meals={vaultData.meals}
+            goals={vaultData.goals}
+            wearable={vaultData.wearable}
+            selectedDate={selectedDate}
+            onAddMealToDiary={handleAddMeal}
+          />
+        )}
+
+        {/* Tab 5: Interactive Long-Term Analytics */}
         {activeTab === "analytics" && (
           <AnalyticsDashboard
             meals={vaultData.meals}
@@ -270,6 +283,9 @@ export default function App() {
             onRestoreVault={handleRestoreVault}
           />
         )}
+
+        {/* PWA Offline Mode Indicator */}
+        <OfflineIndicator />
 
       </main>
 

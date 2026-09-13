@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#064e3b" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  
+  <!-- Rounded Base -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  
+  <!-- Outer Glow Ring -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#6ee7b7" stroke-opacity="0.25" stroke-width="8" stroke-dasharray="16 12"/>
+  
+  <!-- Vitality Ring -->
+  <circle cx="256" cy="256" r="148" fill="#064e3b" fill-opacity="0.4" stroke="url(#ringGrad)" stroke-width="14" filter="url(#shadow)"/>
+  
+  <!-- Optical Focus Corners (Camera / Barcode Scanner) -->
+  <path d="M 160 190 L 160 160 L 190 160" fill="none" stroke="#a7f3d0" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 322 160 L 352 160 L 352 190" fill="none" stroke="#a7f3d0" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 160 322 L 160 352 L 190 352" fill="none" stroke="#a7f3d0" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 322 352 L 352 352 L 352 322" fill="none" stroke="#a7f3d0" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Center Leaf & Pulse Icon -->
+  <path d="M 256 168 C 295 195 315 240 300 285 C 288 320 256 344 256 344 C 256 344 224 320 212 285 C 197 240 217 195 256 168 Z" fill="#ffffff"/>
+  <path d="M 256 200 L 256 320" stroke="#10b981" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 256 240 L 282 222" stroke="#10b981" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 256 268 L 232 250" stroke="#10b981" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Scan Laser Line -->
+  <line x1="140" y1="256" x2="372" y2="256" stroke="#f43f5e" stroke-width="6" stroke-linecap="round" stroke-opacity="0.9"/>
+  <circle cx="256" cy="256" r="6" fill="#f43f5e"/>
+</svg>

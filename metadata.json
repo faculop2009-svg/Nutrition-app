@@ -1,6 +1,6 @@
 {
   "name": "NutriScan Pro - Contador de Calorías y Nutrición Inteligente",
-  "description": "Aplicación profesional de conteo de calorías mediante análisis visual por IA, desglose nutricional en tiempo real, diario de alimentos, escáner de códigos de barras, sincronización de wearables y métricas avanzadas.",
+  "description": "Aplicación clínica de nutrición y conteo de calorías mediante análisis visual por IA multimodal, simulador de curva glucémica, auditoría de longevidad, generador de planes dietéticos, escáner de códigos de barras, soporte PWA offline y telemetría de wearables.",
   "requestFramePermissions": ["camera"],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

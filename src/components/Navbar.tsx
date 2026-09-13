@@ -14,6 +14,7 @@ import {
   RefreshCw
 } from "lucide-react";
 import { WearableVitals, PushNotificationItem } from "../types";
+import { PWAInstallButton } from "./PWAInstallButton";
 
 interface NavbarProps {
   activeTab: string;
@@ -48,6 +49,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: "scan", label: "Escaneo IA", icon: Camera, badge: "Instantáneo" },
     { id: "diary", label: "Diario", icon: BookOpen },
     { id: "barcode", label: "Alimentos & Barras", icon: Barcode },
+    { id: "longevity", label: "Longevidad & Plan IA", icon: Sparkles, badge: "Clínico" },
     { id: "analytics", label: "Análisis", icon: BarChart3 },
     { id: "wearables", label: "Wearables", icon: Watch, live: true },
     { id: "challenges", label: "Retos & Logros", icon: Trophy },
@@ -130,8 +132,11 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
           </div>
 
-          {/* Right Action: Notifications & Settings */}
+          {/* Right Action: Notifications & Settings & PWA Install */}
           <div className="flex items-center gap-2 sm:gap-3">
+            {/* PWA In-App Install Prompt */}
+            <PWAInstallButton compact={true} />
+
             {/* Notification Bell */}
             <div className="relative">
               <button
